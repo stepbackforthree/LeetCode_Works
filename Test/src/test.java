@@ -5,51 +5,28 @@ import java.util.*;
 public class test {
     @Test
     public void test() {
-        int[] nums = {-2,1};
-        int[][] subMaxCollection = new int[nums.length][nums.length];
-        int subSum = 0;
-        for (int i = 0; i < nums.length; i++) {
-            subSum += nums[i];
-            subMaxCollection[0][i] = subSum;
+        int m = 3, n = 7;
+        int[][] cache = new int[m][n];
+        findNext(m, n, 1, 1, cache);
+        System.out.println(cache[0]);
+    }
+
+    int findNext(int m, int n, int currM, int currN, int[][] cache) {
+        if (currM > m || currN > n) {
+            return 0;
         }
 
-        for (int i = 1; i < nums.length; i++) {
-            for (int j = 0; j < nums.length; j++) {
-                if (j < i) {
-                    subMaxCollection[i][j] = Integer.MIN_VALUE;
-                } else if (i == j) {
-                    subMaxCollection[i][j] = nums[i];
-                } else {
-                    subMaxCollection[i][j] = subMaxCollection[i - 1][j] - subMaxCollection[i - 1][i - 1];
-                }
-            }
+        if (currM == m || currN == n) {
+            return 1;
         }
 
-        int maxValue = Integer.MIN_VALUE;
-        int index1 = 0;
-        int index2 = 0;
-        for (int i = 0; i < nums.length; i++) {
-            int[] num = subMaxCollection[i];
-            int tempMaxValue = Arrays.stream(num).max().getAsInt();
-            if (tempMaxValue > maxValue) {
-                index1 = i;
-                maxValue = tempMaxValue;
-            }
+        if (cache[currM][currN] != 0) {
+            return cache[currM][currN];
         }
 
-        for (int j = index1; j < nums.length; j++) {
-            if (subMaxCollection[index1][j] == maxValue) {
-                index2 = j;
-            }
-        }
+        cache[currM][currN] = findNext(m, n, currM + 1, currN, cache) + findNext(m, n, currM, currN + 1, cache);
+        return findNext(m, n, currM + 1, currN, cache) + findNext(m, n, currM, currN + 1, cache);
 
-        int[] result = new int[index2 - index1 + 1];
-        System.out.println(Arrays.deepToString(subMaxCollection));
-        for (int i = index1; i < index2 + 1; i++) {
-            result[i - index1] = nums[i];
-        }
-
-        System.out.println(Arrays.toString(result));
     }
 }
 

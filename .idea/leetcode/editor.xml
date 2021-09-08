@@ -29,6 +29,15 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[1221]分割平衡字符串.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[1221]分割平衡字符串.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[1221]分割平衡字符串.java" />
+              <option name="questionId" value="1221" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[1588]所有奇数长度子数组的和.java">
           <value>
             <LeetcodeEditor>
@@ -88,6 +97,15 @@
               <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[20]有效的括号.md" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[20]有效的括号.java" />
               <option name="questionId" value="20" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[215]数组中的第K个最大元素.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[215]数组中的第K个最大元素.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[215]数组中的第K个最大元素.java" />
+              <option name="questionId" value="215" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -232,6 +250,15 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[502]IPO.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[502]IPO.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[502]IPO.java" />
+              <option name="questionId" value="502" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[528]按权重随机选择.java">
           <value>
             <LeetcodeEditor>
@@ -250,11 +277,38 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[55]跳跃游戏.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[55]跳跃游戏.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[55]跳跃游戏.java" />
+              <option name="questionId" value="55" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[56]合并区间.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[56]合并区间.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[56]合并区间.java" />
+              <option name="questionId" value="56" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[5]最长回文子串.java">
           <value>
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[5]最长回文子串.java" />
               <option name="questionId" value="5" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[62]不同路径.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[62]不同路径.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[62]不同路径.java" />
+              <option name="questionId" value="62" />
             </LeetcodeEditor>
           </value>
         </entry>
