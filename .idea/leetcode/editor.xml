@@ -74,6 +74,15 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[1894]找到需要补充粉笔的学生编号.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[1894]找到需要补充粉笔的学生编号.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[1894]找到需要补充粉笔的学生编号.java" />
+              <option name="questionId" value="1894" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[19]删除链表的倒数第 N 个结点.java">
           <value>
             <LeetcodeEditor>
@@ -303,6 +312,15 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[600]不含连续1的非负整数.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[600]不含连续1的非负整数.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[600]不含连续1的非负整数.java" />
+              <option name="questionId" value="600" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[62]不同路径.java">
           <value>
             <LeetcodeEditor>
@@ -312,12 +330,102 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[64]最小路径和.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[64]最小路径和.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[64]最小路径和.java" />
+              <option name="questionId" value="64" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[678]有效的括号字符串.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[678]有效的括号字符串.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[678]有效的括号字符串.java" />
+              <option name="questionId" value="678" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[68]文本左右对齐.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[68]文本左右对齐.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[68]文本左右对齐.java" />
+              <option name="questionId" value="68" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[704]二分查找.java">
           <value>
             <LeetcodeEditor>
               <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[704]二分查找.md" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[704]二分查找.java" />
               <option name="questionId" value="704" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[70]爬楼梯.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[70]爬楼梯.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[70]爬楼梯.java" />
+              <option name="questionId" value="70" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[72]编辑距离.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[72]编辑距离.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[72]编辑距离.java" />
+              <option name="questionId" value="72" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[75]颜色分类.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[75]颜色分类.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[75]颜色分类.java" />
+              <option name="questionId" value="75" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[76]最小覆盖子串.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[76]最小覆盖子串.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[76]最小覆盖子串.java" />
+              <option name="questionId" value="76" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[78]子集.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[78]子集.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[78]子集.java" />
+              <option name="questionId" value="78" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[79]单词搜索.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[79]单词搜索.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[79]单词搜索.java" />
+              <option name="questionId" value="79" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[84]柱状图中最大的矩形.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[84]柱状图中最大的矩形.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[84]柱状图中最大的矩形.java" />
+              <option name="questionId" value="84" />
             </LeetcodeEditor>
           </value>
         </entry>
