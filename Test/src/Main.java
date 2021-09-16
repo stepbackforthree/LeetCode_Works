@@ -4,26 +4,40 @@ import java.util.*;
 
 
 public class Main {
-    /**
-     * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
-     *
-     *
-     * @param s string字符串
-     * @return string字符串
-     */
-    @Test
-    public void unique_string () {
-        // write code here
-        String s = "aab";
-        Set<Character> hashSet = new HashSet<>();
-        StringBuilder result = new StringBuilder();
-        for (int i = 0; i < s.length(); ++i) {
-            if (!hashSet.contains(s.charAt(i))) {
-                result.append(s.charAt(i));
-                hashSet.add(s.charAt(i));
-            }
-        }
+    public static void main(String[] args) {
+        Object object1 = new Object();
+        Object object2 = new Object();
 
-        System.out.println(result.toString());
+        new Thread(() -> {
+            synchronized (object1) {
+                System.out.println(Thread.currentThread() + "get object1");
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println(Thread.currentThread() + "wait to get object2");
+
+                synchronized (object2) {
+                    System.out.println(Thread.currentThread() + "get object2");
+                }
+            }
+        }, "线程1").start();
+
+        new Thread(() -> {
+            synchronized (object1) {
+                System.out.println(Thread.currentThread() + "get object2");
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println(Thread.currentThread() + "wait to get object1");
+
+                synchronized (object2) {
+                    System.out.println(Thread.currentThread() + "get object1");
+                }
+            }
+        }, "线程2").start();
     }
 }
