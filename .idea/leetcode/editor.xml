@@ -30,6 +30,15 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[105]从前序与中序遍历序列构造二叉树.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[105]从前序与中序遍历序列构造二叉树.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[105]从前序与中序遍历序列构造二叉树.java" />
+              <option name="questionId" value="105" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[10]正则表达式匹配.java">
           <value>
             <LeetcodeEditor>
@@ -47,6 +56,15 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[114]二叉树展开为链表.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[114]二叉树展开为链表.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[114]二叉树展开为链表.java" />
+              <option name="questionId" value="114" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[11]盛最多水的容器.java">
           <value>
             <LeetcodeEditor>
@@ -56,12 +74,30 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[121]买卖股票的最佳时机.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[121]买卖股票的最佳时机.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[121]买卖股票的最佳时机.java" />
+              <option name="questionId" value="121" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[1221]分割平衡字符串.java">
           <value>
             <LeetcodeEditor>
               <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[1221]分割平衡字符串.md" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[1221]分割平衡字符串.java" />
               <option name="questionId" value="1221" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[124]二叉树中的最大路径和.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[124]二叉树中的最大路径和.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[124]二叉树中的最大路径和.java" />
+              <option name="questionId" value="124" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -190,6 +226,15 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[292]Nim 游戏.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[292]Nim 游戏.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[292]Nim 游戏.java" />
+              <option name="questionId" value="292" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[2]两数相加.java">
           <value>
             <LeetcodeEditor>
@@ -231,6 +276,15 @@
               <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[34]在排序数组中查找元素的第一个和最后一个位置.md" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[34]在排序数组中查找元素的第一个和最后一个位置.java" />
               <option name="questionId" value="34" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[36]有效的数独.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[36]有效的数独.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[36]有效的数独.java" />
+              <option name="questionId" value="36" />
             </LeetcodeEditor>
           </value>
         </entry>
