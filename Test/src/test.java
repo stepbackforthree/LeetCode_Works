@@ -4,25 +4,24 @@ import org.junit.Test;
 import java.util.*;
 
 public class test {
-    //TreeNode root = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));
-    TreeNode root = new TreeNode(1, null, new TreeNode(2));
+    String s = "a";
+    List<String> wordDict = new ArrayList<>();
     @Test
     public void test() {
-        System.out.println(findNext(root.left, root.right));
-    }
+        wordDict.add("a");
 
-    int findNext(TreeNode left, TreeNode right) {
-        if (left == null && right == null) {
-            return 1;
-        }
+        boolean[] dp = new boolean[s.length() + 1];
+        dp[0] = true;
 
-        if (right == null) {
-            return 1 + findNext(left.left, left.right);
-        } else if (left == null) {
-            return 1 + findNext(right.left, right.right);
-        } else {
-            return 1 + Math.max(findNext(left.left, left.right), findNext(right.left, right.right));
+        for (int i = 1; i < s.length() + 1; ++i) {
+            for (int j = i; j < s.length() + 1; ++j) {
+                String subStr = s.substring(i - 1, j);
+                if (wordDict.contains(subStr) && dp[i - 1]) {
+                    dp[j] = true;
+                }
+            }
         }
+        System.out.println(dp[s.length()]);
     }
 }
 
