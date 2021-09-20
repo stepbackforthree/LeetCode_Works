@@ -128,6 +128,24 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[141]环形链表.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[141]环形链表.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[141]环形链表.java" />
+              <option name="questionId" value="141" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[142]环形链表 II.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[142]环形链表 II.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[142]环形链表 II.java" />
+              <option name="questionId" value="142" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[1588]所有奇数长度子数组的和.java">
           <value>
             <LeetcodeEditor>
@@ -267,6 +285,15 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[2]两数相加.java" />
               <option name="questionId" value="2" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[300]最长递增子序列.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[300]最长递增子序列.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[300]最长递增子序列.java" />
+              <option name="questionId" value="300" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -498,6 +525,15 @@
               <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[650]只有两个键的键盘.md" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[650]只有两个键的键盘.java" />
               <option name="questionId" value="650" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/[673]最长递增子序列的个数.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/[673]最长递增子序列的个数.md" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/[673]最长递增子序列的个数.java" />
+              <option name="questionId" value="673" />
             </LeetcodeEditor>
           </value>
         </entry>
