@@ -4,24 +4,26 @@ import org.junit.Test;
 import java.util.*;
 
 public class test {
-    String s = "a";
-    List<String> wordDict = new ArrayList<>();
+    int[] nums = {-4, -3, -2};
+
     @Test
     public void test() {
-        wordDict.add("a");
+        int result = Integer.MIN_VALUE, min = 0, max = 0;
 
-        boolean[] dp = new boolean[s.length() + 1];
-        dp[0] = true;
-
-        for (int i = 1; i < s.length() + 1; ++i) {
-            for (int j = i; j < s.length() + 1; ++j) {
-                String subStr = s.substring(i - 1, j);
-                if (wordDict.contains(subStr) && dp[i - 1]) {
-                    dp[j] = true;
-                }
+        for (int i = 0; i < nums.length; ++i) {
+            if (i == 0) {
+                max = nums[i];
+                min = nums[i];
+            } else {
+                int tempMax = max, tempMin = min;
+                max = Math.max(tempMax * nums[i], Math.max(tempMin * nums[i], nums[i]));
+                min = Math.min(tempMin * nums[i], Math.min(tempMax * nums[i], nums[i]));
             }
+
+            result = Math.max(result, max);
         }
-        System.out.println(dp[s.length()]);
+
+        System.out.println(result);
     }
 }
 
