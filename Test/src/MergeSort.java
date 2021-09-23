@@ -1,15 +1,21 @@
+import org.junit.Test;
+
+import java.util.Arrays;
+
 public class MergeSort {
-    public int[] mergeSort(int[] nums, int low, int high) {
+    void mergeSort(int[] nums, int low, int high) {
+        if (low > high) {
+            return;
+        }
+
         int mid = low + (high - low) / 2;
 
         if (low < high) {
             mergeSort(nums, low, mid);
-            mergeSort(nums, mid, high);
+            mergeSort(nums, mid + 1, high);
             // 左右归并
             merge(nums, low, mid, high);
         }
-
-        return nums;
     }
 
     void merge(int[] nums, int low, int mid, int high) {
@@ -39,5 +45,12 @@ public class MergeSort {
         for (int x = 0; x < temp.length; ++x) {
             nums[x + low] = temp[x];
         }
+    }
+
+    @Test
+    public void test() {
+        int[] nums = new int[]{1, 4, 6, 3, 10, 5, 2, 8, 12, 9};
+        mergeSort(nums, 0, nums.length - 1);
+        System.out.println(Arrays.toString(nums));
     }
 }
