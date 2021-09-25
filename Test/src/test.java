@@ -4,26 +4,51 @@ import org.junit.Test;
 import java.util.*;
 
 public class test {
-    int[] nums = {-4, -3, -2};
+    // Node head = new Node(1, null, null, new Node(2, null, null, new Node(3, null, null, null)));
+    ListNode head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
 
     @Test
     public void test() {
-        int result = Integer.MIN_VALUE, min = 0, max = 0;
+        System.out.println(findNext(head));
+    }
 
-        for (int i = 0; i < nums.length; ++i) {
-            if (i == 0) {
-                max = nums[i];
-                min = nums[i];
-            } else {
-                int tempMax = max, tempMin = min;
-                max = Math.max(tempMax * nums[i], Math.max(tempMin * nums[i], nums[i]));
-                min = Math.min(tempMin * nums[i], Math.min(tempMax * nums[i], nums[i]));
-            }
-
-            result = Math.max(result, max);
+    ListNode findNext(ListNode node) {
+        if (node.next != null) {
+            ListNode curr = findNext(node.next);
+            node.next = null;
+            curr.next = node;
+            return curr.next;
+        } else {
+            return node;
         }
+    }
+}
 
-        System.out.println(result);
+class Node {
+    int val;
+    Node prev;
+    Node next;
+    Node child;
+
+    public Node(int val) {
+        this.val = val;
+    }
+
+    public Node(int val, Node prev, Node next, Node child) {
+        this.val = val;
+        this.prev = prev;
+        this.next = next;
+        this.child = child;
+    }
+
+    @Override
+    public String toString() {
+        return "Node{" +
+                "val=" + val +
+                ", prev=" + prev +
+                ", next=" + next +
+                ", child=" + child +
+                '}';
     }
 }
 

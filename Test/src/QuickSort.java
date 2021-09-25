@@ -21,7 +21,7 @@ public class QuickSort {
                 i++;
             }
 
-            while (i < j && nums[i] < nums[j]) {
+            while (i < j && nums[i] < baseVal) {
                 i++;
             }
 

@@ -23,7 +23,7 @@ public class MergeSort {
         int i = low, j = mid + 1, k = 0;
 
         // 把较小的数据先加入到新数组中
-        while (i <= mid && j<= high) {
+        while (i <= mid && j <= high) {
             if (nums[i] < nums[j]) {
                 temp[k++] = nums[i++];
             } else {
