@@ -4,22 +4,45 @@ import org.junit.Test;
 import java.util.*;
 
 public class test {
-    // Node head = new Node(1, null, null, new Node(2, null, null, new Node(3, null, null, null)));
-    ListNode head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
-
+    int[][] grid = {{3,0,8,4}, {2,4,5,7}, {9,2,6,3}, {0,3,1,0}};
     @Test
     public void test() {
-        System.out.println(findNext(head));
+        int result = 0;
+
+        for (int i = 0; i < grid.length; ++i) {
+            for (int j = 0; j < grid[0].length; ++j) {
+                result += Math.min(findNextVertical(grid, i, j, grid[i][j], i), findNextHorizontal(grid, i, j, grid[i][j], j)) - grid[i][j];
+            }
+        }
+
+        System.out.println(result);
     }
 
-    ListNode findNext(ListNode node) {
-        if (node.next != null) {
-            ListNode curr = findNext(node.next);
-            node.next = null;
-            curr.next = node;
-            return curr.next;
+    int findNextVertical(int[][] grid, int nextr, int nextc, int curr, int currIdx) {
+        if (nextr >= grid.length || nextr < 0) {
+            return curr;
+        }
+
+        if (currIdx == nextr) {
+            return Math.max(findNextVertical(grid, nextr + 1, nextc, Math.max(curr, grid[nextr][nextc]), currIdx), findNextVertical(grid, nextr - 1, nextc, Math.max(curr, grid[nextr][nextc]), currIdx));
+        } else if (currIdx > nextr) {
+            return findNextVertical(grid, nextr-1, nextc, Math.max(curr, grid[nextr][nextc]), currIdx);
         } else {
-            return node;
+            return findNextVertical(grid, nextr+1, nextc, Math.max(curr, grid[nextr][nextc]), currIdx);
+        }
+    }
+
+    int findNextHorizontal(int[][] grid, int nextr, int nextc, int curr, int currIdx) {
+        if (nextc >= grid[0].length || nextc < 0) {
+            return curr;
+        }
+
+        if (currIdx == nextc) {
+            return Math.max(findNextHorizontal(grid, nextr, nextc + 1, Math.max(curr, grid[nextr][nextc]), currIdx), findNextHorizontal(grid, nextr, nextc - 1, Math.max(curr, grid[nextr][nextc]), currIdx));
+        } else if (currIdx > nextc) {
+            return findNextHorizontal(grid, nextr, nextc-1, Math.max(curr, grid[nextr][nextc]), currIdx);
+        } else {
+            return findNextHorizontal(grid, nextr, nextc+1, Math.max(curr, grid[nextr][nextc]), currIdx);
         }
     }
 }

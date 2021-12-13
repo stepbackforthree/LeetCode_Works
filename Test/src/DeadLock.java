@@ -3,7 +3,7 @@ import org.junit.Test;
 import java.util.*;
 
 
-public class Main {
+public class DeadLock {
     public static void main(String[] args) {
         Object object1 = new Object();
         Object object2 = new Object();
