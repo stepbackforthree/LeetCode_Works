@@ -4,46 +4,50 @@ import org.junit.Test;
 import java.util.*;
 
 public class test {
-    int[][] grid = {{3,0,8,4}, {2,4,5,7}, {9,2,6,3}, {0,3,1,0}};
     @Test
     public void test() {
+        int[] ages = {53,109,24,35,22,37,58,99,26,70,22,81,30,36,69};
+        System.out.println(numFriendRequests(ages));
+    }
+
+    public int numFriendRequests(int[] ages) {
+        Arrays.sort(ages);
         int result = 0;
 
-        for (int i = 0; i < grid.length; ++i) {
-            for (int j = 0; j < grid[0].length; ++j) {
-                result += Math.min(findNextVertical(grid, i, j, grid[i][j], i), findNextHorizontal(grid, i, j, grid[i][j], j)) - grid[i][j];
+        for (int i = ages.length - 1; i > 0; --i) {
+            int num = i - binarySearch(0, i, i, ages);
+            result += Math.max(num, 0);
+            int j = i;
+            while (j > 0 && ages[j] > ages[j] / 2 + 7 && ages[j] == ages[j-1]) {
+                result++;
+                j--;
             }
         }
 
-        System.out.println(result);
+        return result;
     }
 
-    int findNextVertical(int[][] grid, int nextr, int nextc, int curr, int currIdx) {
-        if (nextr >= grid.length || nextr < 0) {
-            return curr;
+    int binarySearch(int left, int right, int index, int[] ages) {
+        int target = ages[right] / 2 + 7;
+
+        while (left <= right) {
+            int mid = (left + right) / 2;
+
+            if (ages[mid] == target && mid != index) {
+                int j = mid;
+                while (j < ages.length - 1 && ages[j] == ages[j+1]) {
+                    mid++;
+                    j++;
+                }
+                return mid + 1;
+            } else if (ages[mid] < target) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
         }
 
-        if (currIdx == nextr) {
-            return Math.max(findNextVertical(grid, nextr + 1, nextc, Math.max(curr, grid[nextr][nextc]), currIdx), findNextVertical(grid, nextr - 1, nextc, Math.max(curr, grid[nextr][nextc]), currIdx));
-        } else if (currIdx > nextr) {
-            return findNextVertical(grid, nextr-1, nextc, Math.max(curr, grid[nextr][nextc]), currIdx);
-        } else {
-            return findNextVertical(grid, nextr+1, nextc, Math.max(curr, grid[nextr][nextc]), currIdx);
-        }
-    }
-
-    int findNextHorizontal(int[][] grid, int nextr, int nextc, int curr, int currIdx) {
-        if (nextc >= grid[0].length || nextc < 0) {
-            return curr;
-        }
-
-        if (currIdx == nextc) {
-            return Math.max(findNextHorizontal(grid, nextr, nextc + 1, Math.max(curr, grid[nextr][nextc]), currIdx), findNextHorizontal(grid, nextr, nextc - 1, Math.max(curr, grid[nextr][nextc]), currIdx));
-        } else if (currIdx > nextc) {
-            return findNextHorizontal(grid, nextr, nextc-1, Math.max(curr, grid[nextr][nextc]), currIdx);
-        } else {
-            return findNextHorizontal(grid, nextr, nextc+1, Math.max(curr, grid[nextr][nextc]), currIdx);
-        }
+        return left;
     }
 }
 
@@ -125,6 +129,16 @@ class TreeNode {
                 ", left=" + left +
                 ", right=" + right +
                 '}';
+    }
+}
+
+class Trie {
+    Trie[] children;
+    Boolean isEnd;
+
+    public Trie() {
+        children = new Trie[26];
+        isEnd = false;
     }
 }
 
