@@ -6,48 +6,53 @@ import java.util.*;
 public class test {
     @Test
     public void test() {
-        int[] ages = {53,109,24,35,22,37,58,99,26,70,22,81,30,36,69};
-        System.out.println(numFriendRequests(ages));
+        System.out.println(GetLeastNumbers_Solution(new int[]{4,5,1,6,2,7,3,8}, 4));
     }
 
-    public int numFriendRequests(int[] ages) {
-        Arrays.sort(ages);
-        int result = 0;
+    public ArrayList<Integer> GetLeastNumbers_Solution(int [] input, int k) {
+        quickSort(0, input.length - 1, input);
 
-        for (int i = ages.length - 1; i > 0; --i) {
-            int num = i - binarySearch(0, i, i, ages);
-            result += Math.max(num, 0);
-            int j = i;
-            while (j > 0 && ages[j] > ages[j] / 2 + 7 && ages[j] == ages[j-1]) {
-                result++;
-                j--;
-            }
+        ArrayList<Integer> result = new ArrayList<>();
+
+        for (int i = 0; i < k; ++i) {
+            result.add(input[i]);
         }
 
         return result;
     }
 
-    int binarySearch(int left, int right, int index, int[] ages) {
-        int target = ages[right] / 2 + 7;
+    void quickSort(int left, int right, int[] nums) {
+        if (left >= right) {
+            return;
+        }
 
-        while (left <= right) {
-            int mid = (left + right) / 2;
+        int l = left, r = right;
+        int std = nums[left];
 
-            if (ages[mid] == target && mid != index) {
-                int j = mid;
-                while (j < ages.length - 1 && ages[j] == ages[j+1]) {
-                    mid++;
-                    j++;
-                }
-                return mid + 1;
-            } else if (ages[mid] < target) {
-                left = mid + 1;
-            } else {
-                right = mid - 1;
+        while (l < r) {
+            while (l < r && nums[r] >= std) {
+                r--;
+            }
+
+            while (l < r && nums[l] <= std) {
+                l++;
+            }
+
+            if (l < r) {
+                swap(l, r, nums);
             }
         }
 
-        return left;
+        swap(left, l, nums);
+
+        quickSort(left, l - 1, nums);
+        quickSort(l + 1, right, nums);
+    }
+
+    void swap(int left, int right, int[] nums) {
+        int temp = nums[left];
+        nums[left] = nums[right];
+        nums[right] = temp;
     }
 }
 

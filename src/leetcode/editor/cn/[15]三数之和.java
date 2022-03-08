@@ -43,27 +43,50 @@ import java.util.stream.Collectors;
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
+        List<List<Integer>> result = new ArrayList<>();
+
+        if (nums == null || nums.length <= 2) {
+            return result;
+        }
+
         Arrays.sort(nums);
-        HashSet<List<Integer>> result = new HashSet<>();
 
-        for (int i = 0; i < nums.length && nums[i] <= 0; i++) {
-            int twoSumValue = -nums[i];
-            for (int j = i + 1; j < nums.length - 1; j++) {
-                int oneSumValue = twoSumValue - nums[j];
-                ArrayList<Integer> arrayList = (ArrayList<Integer>) Arrays.stream(Arrays.copyOfRange(nums, j + 1, nums.length)).boxed().collect(Collectors.toList());
-                HashSet<Integer> hashSet = new HashSet<>(arrayList);
-                if (hashSet.contains(oneSumValue)) {
-                    ArrayList<Integer> arrayList1 = new ArrayList<>();
-                    arrayList1.add(nums[i]);
-                    arrayList1.add(nums[j]);
-                    arrayList1.add(oneSumValue);
-                    arrayList1.sort(Comparator.naturalOrder());
-                    result.add(arrayList1);
+        for (int i = 0; i < nums.length - 2; ++i) {
+            if (nums[i] > 0) {
+                break;
+            }
+
+            if (i > 0 && nums[i] == nums[i-1]) {
+                continue;
+            }
+
+            int value = -nums[i];
+
+            int left = i + 1, right = nums.length - 1;
+
+            while (left < right) {
+                if (nums[left] + nums[right] == value) {
+                    result.add(Arrays.asList(nums[i], nums[left], nums[right]));
+
+                    left++;
+                    right--;
+
+                    while (left < right && nums[left] == nums[left-1]) {
+                        left++;
+                    }
+
+                    while (left < right && nums[right] == nums[right+1]) {
+                        right--;
+                    }
+                } else if (nums[left] + nums[right] < value) {
+                    left++;
+                } else {
+                    right--;
                 }
-
             }
         }
-        return new ArrayList<>(result);
+
+        return result;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
