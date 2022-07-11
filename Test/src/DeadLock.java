@@ -25,7 +25,7 @@ public class DeadLock {
         }, "线程1").start();
 
         new Thread(() -> {
-            synchronized (object1) {
+            synchronized (object2) {
                 System.out.println(Thread.currentThread() + "get object2");
                 try {
                     Thread.sleep(1000);
@@ -34,7 +34,7 @@ public class DeadLock {
                 }
                 System.out.println(Thread.currentThread() + "wait to get object1");
 
-                synchronized (object2) {
+                synchronized (object1) {
                     System.out.println(Thread.currentThread() + "get object1");
                 }
             }

@@ -1,58 +1,53 @@
-import com.sun.source.tree.Tree;
-import org.junit.Test;
+import org.w3c.dom.ls.LSOutput;
 
 import java.util.*;
 
-public class test {
-    @Test
+public class Test {
+    int result = Integer.MAX_VALUE;
+
+    @org.junit.Test
     public void test() {
-        System.out.println(GetLeastNumbers_Solution(new int[]{4,5,1,6,2,7,3,8}, 4));
-    }
+        Scanner sc = new Scanner(System.in);
 
-    public ArrayList<Integer> GetLeastNumbers_Solution(int [] input, int k) {
-        quickSort(0, input.length - 1, input);
+        while (sc.hasNext()) {
+            String input = sc.next();
 
-        ArrayList<Integer> result = new ArrayList<>();
+            int remainder = 8 - input.length() % 8;
 
-        for (int i = 0; i < k; ++i) {
-            result.add(input[i]);
-        }
+            int start = 0;
 
-        return result;
-    }
-
-    void quickSort(int left, int right, int[] nums) {
-        if (left >= right) {
-            return;
-        }
-
-        int l = left, r = right;
-        int std = nums[left];
-
-        while (l < r) {
-            while (l < r && nums[r] >= std) {
-                r--;
+            if (input.length() > 8) {
+                while (start < input.length() && start + 8 < input.length()) {
+                    String subString = input.substring(start, start + 8);
+                    start += 8;
+                    System.out.println(subString);
+                }
             }
 
-            while (l < r && nums[l] <= std) {
-                l++;
-            }
+            String remainderString = "";
+            String subString = input.substring(input.length() / 8 * 8);
 
-            if (l < r) {
-                swap(l, r, nums);
+            if (remainder != 0 && remainder != 8) {
+                for (int i = 0; i < remainder; ++i) {
+                    remainderString += "0";
+                }
+                System.out.println(subString + remainderString);
+            } else {
+                System.out.println(input);
             }
         }
-
-        swap(left, l, nums);
-
-        quickSort(left, l - 1, nums);
-        quickSort(l + 1, right, nums);
     }
 
-    void swap(int left, int right, int[] nums) {
-        int temp = nums[left];
-        nums[left] = nums[right];
-        nums[right] = temp;
+    private ListNode reverse(ListNode node) {
+        if (node.next == null) {
+            return node;
+        }
+
+        ListNode head = reverse(node.next);
+        node.next.next = node;
+        node.next = null;
+
+        return head;
     }
 }
 
@@ -146,4 +141,3 @@ class Trie {
         isEnd = false;
     }
 }
-

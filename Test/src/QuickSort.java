@@ -3,43 +3,44 @@ import org.junit.Test;
 import java.util.Arrays;
 
 public class QuickSort {
-    void quickSort(int[] nums, int start, int end) {
-        if (start >= end) {
+    void quickSort(int left, int right, int[] nums) {
+        if (left >= right) {
             return;
         }
 
-        int i = start, j = end;
-        int baseVal = nums[start];
+        int l = left, r = right;
+        int std = nums[left];
 
-        while (i < j) {
-            while (i < j && nums[j] >= baseVal) {
-                j--;
+        while (l < r) {
+            while (l < r && nums[r] >= std) {
+                r--;
             }
 
-            if (i < j) {
-                nums[i] = nums[j];
-                i++;
+            while (l < r && nums[l] <= std) {
+                l++;
             }
 
-            while (i < j && nums[i] < baseVal) {
-                i++;
-            }
-
-            if (i < j) {
-                nums[j] = nums[i];
-                j--;
+            if (l < r) {
+                swap(l, r, nums);
             }
         }
-        nums[i] = baseVal;
 
-        quickSort(nums, start, i - 1);
-        quickSort(nums, i + 1, end);
+        swap(left, l, nums);
+
+        quickSort(left, l - 1, nums);
+        quickSort(l + 1, right, nums);
+    }
+
+    void swap(int left, int right, int[] nums) {
+        int temp = nums[left];
+        nums[left] = nums[right];
+        nums[right] = temp;
     }
 
     @Test
     public void test() {
         int[] nums = new int[]{1, 4, 6, 3, 10, 5, 2, 8, 12, 9};
-        quickSort(nums, 0, nums.length - 1);
+        quickSort(0, nums.length - 1, nums);
         System.out.println(Arrays.toString(nums));
     }
 }

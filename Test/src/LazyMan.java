@@ -2,7 +2,7 @@ public class LazyMan {
 
     private LazyMan() {}
 
-    private static LazyMan lazyMan;
+    private volatile static LazyMan lazyMan;
 
     public static LazyMan getLazyMan() {
         if (lazyMan == null) {

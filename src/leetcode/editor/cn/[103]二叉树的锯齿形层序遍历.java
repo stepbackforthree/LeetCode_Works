@@ -37,6 +37,7 @@
 //leetcode submit region begin(Prohibit modification and deletion)
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -55,7 +56,7 @@ import java.util.List;
  * }
  */
 class Solution {
-    List<List<Integer>> result = new ArrayList<>();
+    List<List<Integer>> result = new LinkedList<>();
 
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         if (root != null) {
@@ -71,17 +72,17 @@ class Solution {
         }
 
         if (result.size() == layer) {
-            result.add(new ArrayList<>());
+            result.add(new LinkedList<>());
         }
 
-        result.get(layer).add(curr.val);
-        if (layer % 2 != 0) {
-            findNext(curr.left, layer+1);
-            findNext(curr.right, layer+1);
+        if ((layer & 1) == 1) {
+            result.get(layer).add(0, curr.val);
         } else {
-            findNext(curr.right, layer+1);
-            findNext(curr.left, layer+1);
+            result.get(layer).add(curr.val);
         }
+
+        findNext(curr.left, layer+1);
+        findNext(curr.right, layer+1);
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
